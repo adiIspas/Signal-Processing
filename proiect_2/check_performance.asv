@@ -1,0 +1,23 @@
+function [P] = check_performance(Q)
+%CHECK_PERFORMANCE Check performance of algorithms
+
+    P = 0;
+    n = size(Q, 1);
+    m = size(Q, 2);
+    
+    firstP = 0;
+    for i = 1:n
+        firstP = sum(abs(Q(i,:)) ./ max(Q(i,:))); 
+        firstP = firstP - 1;
+    end
+    
+    secondP = 0;
+    for j = 1:m
+        secondP = sum(abs(Q(:, )) ./ max(Q(:,j)));
+        secondP = secondP - 1;
+    end
+    
+    P = firstP + secondP;
+    
+end
+
