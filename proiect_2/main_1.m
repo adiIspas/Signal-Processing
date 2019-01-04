@@ -16,7 +16,7 @@ semnale = [semnal_1 semnal_2 semnal_3]';
 semnale = normalize(A * semnale);
 
 % Aplicam metoda entropiei maxime
-% em = maximum_entropy(semnale);
+em = maximum_entropy(semnale');
 
 % Aplicam metoda divergentei KL
 dkl = kl_divergence(semnale');
@@ -25,8 +25,6 @@ dkl = kl_divergence(semnale');
 jd = jade(semnale, 3);
 
 % Calculam performanta pentru fiecare metoda
-% TODO: De ce pentru celelalte in afara de kl e cu * A si de ce facem cu inv(jd)?
-% P_entropie = check_performance(em * A)
+P_entropie = check_performance(em * A)
 P_kl = check_performance(dkl * A)
 P_jade = check_performance(inv(jd) * A)
-P_a = check_performance(A)
