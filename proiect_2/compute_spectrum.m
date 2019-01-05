@@ -2,7 +2,7 @@ function [mx,f]=compute_spectrum(x,Fs,P)
 %P=0,1,2... cu cat e mai mare cu atat am o scala mai fina de frecvente
 % Fs sampling frequency 
 
-nfft= 2^(nextpow2(length(x))+P)
+nfft = 2^(nextpow2(length(x))+P);
 
 fftx = fft(x,nfft); 
 
@@ -30,7 +30,7 @@ end
 
 f = (0:NumUniquePts-1)*Fs/nfft; 
 
-[mx;f]
+%[mx;f]
 
 
 end
