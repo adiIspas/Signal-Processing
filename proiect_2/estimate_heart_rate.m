@@ -1,4 +1,6 @@
-function [puls_real, puls_estimat] = estimate_heart_rate(semnal, puls, percent_previous, percent_current, dataset_number)
+function [puls_real, puls_estimat] = estimate_heart_rate(semnal, puls, percent_previous, percent_current)
+    
+    % Definim variabile
     fps = 15;
     interval = 5;
     multiply_rate = 60;
