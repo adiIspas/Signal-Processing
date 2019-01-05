@@ -44,7 +44,7 @@ hold on
 plot(puls_estimat)
 hold off
 legend('Puls real','Puls estimat')
-title('Estimare puls')
+title(strcat('Estimare puls dataset  ', int2str(dataset_number)))
 
 figure
 plot(abs(puls_estimat-puls_real))
